@@ -1,0 +1,13 @@
+{
+  "default_info": {
+    "paragraph": [
+      "Welcome to our Conversational-AI Real Estate Investment Consultant! Our AI is designed to assist you in finding the perfect property in Bangalore. Here's how it works: 💪🌟",
+      "It follows a clear process: first, it seeks investment advice to align with financial goals, then explores nearby areas, and finally recommends properties with possession timelines extending to 2025 and beyond using the 'realestate-lookup' tool."
+    ]
+  },
+  "default_questions": [
+    "💸 Tell me about new launches in Bangalore after 2027.",
+    "💡 What's a good upcoming project in Whitefield, Bangalore?",
+    "🌱 Current trends in Bangalore's real estate market?"
+  ]
+}

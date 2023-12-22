@@ -1,0 +1,110 @@
+@font-face {
+  font-family: "Nunito-SemiBold";
+  src: url("../fonts/Nunito-SemiBold.ttf");
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #fffffe;
+    --foreground: #f2f4f6;
+
+    --primary: #bae8e8;
+    --primary-foreground: #a7d1d1;
+
+    --secondary: #2563eb;
+    --secondary-foreground: #2159d4;
+
+    --border: #00214d;
+
+    --accent: #00214d;
+    --accent-foreground: #fffffe;
+
+    --muted: #00214d;
+    --muted-foreground: #000000;
+
+    --link: #2563eb;
+
+    --hover: #f2f4f6;
+  }
+
+  .dark {
+    --background: #121212;
+    --foreground: #202020;
+
+    --primary: #2563eb;
+    --primary-foreground: #7250d7;
+
+    --secondary: #2563eb;
+    --secondary-foreground: #2159d4;
+
+    --border: #323232;
+
+    --accent: #fffffe;
+    --accent-foreground: #fffffe;
+
+    --muted: #fffffe;
+    --muted-foreground: #686868;
+
+    --link: #2563eb;
+
+    --hover: #161616;
+  }
+}
+
+body {
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+  background-color: #121212;
+}
+
+body::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  background-color: #242424;
+}
+
+/* Track */
+body::-webkit-scrollbar-track {
+  background: #242424;
+}
+
+/* Handle */
+body::-webkit-scrollbar-thumb {
+  background: #323232;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+body::-webkit-scrollbar-thumb:hover {
+  background: #323232;
+}
+
+.scroll__bar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  background-color: #242424;
+}
+
+/* Track */
+.scroll__bar::-webkit-scrollbar-track {
+  background: #242424;
+}
+
+/* Handle */
+.scroll__bar::-webkit-scrollbar-thumb {
+  background: #323232;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.scroll__bar::-webkit-scrollbar-thumb:hover {
+  background: #323232;
+}
+
+.bg_blur {
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(8px);
+}

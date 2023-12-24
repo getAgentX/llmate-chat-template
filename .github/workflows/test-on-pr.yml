@@ -1,0 +1,41 @@
+name: Test on PR
+on: [pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Log in to ghcr.io
+        uses: docker/login-action@v1
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Raise Env
+        run: ./raise.sh --daemon
+      - name: Check running containers
+        run: docker ps  -a
+      - name: Tests
+        run: ./test.sh
+
+  flake8-critical:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: flake8 Setup
+        run: docker pull alpine/flake8:3.5.0
+      - name: flake8 Show Stoppers
+        run: >-
+          docker run --rm -v $(pwd)/:/apps alpine/flake8:3.5.0 .
+          --select="E901,E999,F821,F822,F823"
+
+  flake8-quality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: flake8 Setup
+        run: docker pull alpine/flake8:3.5.0
+      - name: flake8 General Tests
+        run: >-
+          docker run --rm -v $(pwd)/:/apps alpine/flake8:3.5.0 . --select="F401,F405"
+          --exclude="*/migrations/*,dos/*"

@@ -68,14 +68,6 @@ const Chat = () => {
   }, [history, responseStream, thoughts]);
 
   const getActiveAppInfo = async () => {
-    // const appInfoUrl = `${process.env.NEXT_PUBLIC_LLMATE_API_URL}app-run/${activeAppRunID}/`;
-
-    // const response = await axios.get(appInfoUrl, {
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //     "X-API-KEY": process.env.NEXT_PUBLIC_API_KEY,
-    //   },
-    // });
 
     const apiUrl = `/api/app-info?id=${activeAppRunID}`;
 
@@ -266,9 +258,7 @@ const Chat = () => {
                 className="w-32 aspect-auto"
               />
 
-              {/* <h2 className="hidden text-2xl font-semibold text-accent font-Nunito-SemiBold xsm:block">
-                llmate
-              </h2> */}
+          
             </Link>
 
             <div className="flex items-center space-x-4">

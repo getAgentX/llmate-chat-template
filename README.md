@@ -36,8 +36,8 @@ Before deploying the chat bot, make sure you have the following:
    Create a `.env.local` file in the root of the project and add the following variables:
 
    ```env
-   NEXT_PUBLIC_API_URL=https://api.llmate.ai
-   NEXT_PUBLIC_LLMATE_API_URL=https://llmate.ai/api
+   NEXT_PUBLIC_API_URL=https://stream.llmate.ai/v1/integrate/
+   NEXT_PUBLIC_LLMATE_API_URL=https://api.llmate.ai/v1/integrate/
    NEXT_PUBLIC_API_ID=your_llmate_app_id
    NEXT_PUBLIC_API_KEY=your_llmate_api_key
    ```
